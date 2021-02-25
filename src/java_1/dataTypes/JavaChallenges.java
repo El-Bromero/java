@@ -4,6 +4,21 @@ public class JavaChallenges {
 
 	public static void main(String[] args) {
 		//solve the code challenges found in the static methods on this class
+
+		printMsg("Hello World!", 5);
+
+		System.out.println(nthFibonacci(10));
+
+		// Doing printf since it formats decimals to 2 places. Added empty println since printf prints on 1 line and doesn't add a new line at the end
+		System.out.printf("calcPay: %.2f", calcPay(12,50, 4));
+		System.out.println();
+
+		System.out.println(countQuarters(10.75));
+
+		System.out.println(reverseString("Hello World"));
+
+		printEgg();
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -13,12 +28,22 @@ public class JavaChallenges {
 		hello world
 		hello world
 		 */
+		for(int i = 0; i < repeats; i++)
+		{
+			System.out.println(msg);
+		}
 	}
 
 	static int nthFibonacci(int n) {
 		/*calculate the nth fibonacci number and return the value.  The first 4 fibonacci numbers are : 1, 1, 2, 3...  learn more : http://bit.ly/fibonacci-agile
 		example : nthFibonacci(7) => 13
 		 */
+
+		// I know we haven't learned recursion but this was easier for me to do than to do a for loop calculating total fib number
+		if(n >= 3)
+		{
+			return (nthFibonacci(n-1) + nthFibonacci(n-2));
+		}
 		return 1;
 	}
 
@@ -28,7 +53,9 @@ public class JavaChallenges {
 		80 hours / period , $50.00 / hr, 8 periods => calcPay(80,25.00,8) => 16000.00
 		1 hr / period, $250.00 / hr, 2 periods => calcPay(1,250.00,2) => 500.00
  */
-		return 0.0d;
+		return (hrsPerPeriod * hourlyRate * payPeriods);
+
+		//return 0.0d;
 	}
 
 	static long solveQuadratic(int x, int y, int z) {
@@ -39,12 +66,24 @@ public class JavaChallenges {
 	static int countQuarters(double amount) {
 //		calculate the number of quarters that can be changed for the given amount.
 //		$10.50 => countQuarters(10.50) => 42
-		return 0;
+		double convertAmount = amount / 0.25;
+		int numQuarter = (int) convertAmount;
+		return numQuarter;
 	}
 
 	static String reverseString(String str) {
 		//reverse the input string and return it.
-		return str;
+		char charStr[] = str.toCharArray();
+		char reverseStr[] = new char[charStr.length];
+
+		int j = 0;
+		for (int i = str.length()-1; i >= 0; i--)
+		{
+			reverseStr[j] = charStr[i];
+			j++;
+		}
+		return String.valueOf(reverseStr);
+		//return str;
 	}
 
 	static String shuffleMessage(String[] messages) {
@@ -79,6 +118,13 @@ public class JavaChallenges {
 			 \_______/
 
 		*/
+		// Adding "\" to \s and "
+		System.out.println("  _______  ");
+		System.out.println(" /       \\ ");
+		System.out.println("/         \\");
+		System.out.println("-\"-'-\"-'-\"-");
+		System.out.println("\\         /");
+		System.out.println(" \\_______/");
 	}
 
 	static class Item {
@@ -99,11 +145,11 @@ public class JavaChallenges {
 		}
 	}
 
-		static double totaledReceipt(Item[] transactions) {
+	static double totaledReceipt(Item[] transactions) {
 
-	//		Calculate the total amount of all items in the transactions array.  Note that each element of the transactions array is of type Item.
-	//		[Item{ item : "pants" , cost : 20.00} , Item{ item : "iPhone", cost : 1100.00} ] => totaledReceipt() => 1120.00
-			return 0.0;
+		//		Calculate the total amount of all items in the transactions array.  Note that each element of the transactions array is of type Item.
+		//		[Item{ item : "pants" , cost : 20.00} , Item{ item : "iPhone", cost : 1100.00} ] => totaledReceipt() => 1120.00
+		return 0.0;
 
-		}
 	}
+}
