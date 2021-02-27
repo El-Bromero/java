@@ -6,8 +6,17 @@ class Arrays {
     int[] bits = new int[]{0,1,1,1,0,0,0,1,1,1,1,1,0,1,0,0,1,0};
     String[] colors = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
 
+    public static void main(String[] args)
+    {
+        
+    }
+
     void printNums() {
 //        Programmatically print the nums array to the console.  Print each number on a new line.  The nums array is defined on this class.
+        for (int i = 0; i < nums.length; i++)
+        {
+            System.out.println(nums[i]);
+        }
     };
 
     void greet(String name) {
