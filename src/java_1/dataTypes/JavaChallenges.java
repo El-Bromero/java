@@ -19,6 +19,8 @@ public class JavaChallenges {
 
 		printEgg();
 
+		Item item1 = new Item("stuff", 1000);
+		System.out.println(item1.toString());
 	}
 
 	static void printMsg(String msg, int repeats) {

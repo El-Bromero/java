@@ -2,40 +2,84 @@ package java_1.dataTypes;
 
 class DataTypes {
 
-//		boolean number = 2021;
-//		byte yearOfBirth = 1977;
-//		Array nums = [3,4,5,6,7,8,10,12];
-//		Object movieName = "Meet The Parents";
-//		double male = 'm';
-//		triple triplet = 3L;
-//		float female = 'f';
-//		short decimalVal = .0000000000001f;
-//		long halfByte = 0101;
+		int number = 2021;
+		int yearOfBirth = 1977;
+		int nums[] = {3,4,5,6,7,8,10,12};
+		String movieName = "Meet The Parents";
+		char male = 'm';
+		long triplet = 3L;
+		char female = 'f';
+		float decimalVal = .0000000000001f;
+		byte halfByte = 0101;
 
 
 	public static void main(String[] args) {
 		//the class fields defined in this DataTypes class have mistakes with either the data type, or the syntax.  Fix the data types so the main method correctly displays the value of all of the variables
+		DataTypes data = new DataTypes();
+		System.out.println(data.number);
+		System.out.println(data.yearOfBirth);
+		for (int i: data.nums) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		System.out.println(data.movieName);
+		System.out.println(data.male);
+		System.out.println(data.triplet);
+		System.out.println(data.female);
+		System.out.println(data.decimalVal);
+		System.out.println(data.halfByte);
+
+
 		//For the methods below in this DataTypes class, determine the appropriate datatypes for the inputs and the outputs
+		System.out.println(data.yearsToMonths(10));
+		System.out.println(data.monthsToHours(3));
+		System.out.println(data.daysToSeconds(5));
+		System.out.println(data.centuriesToSeconds(1));
 	}
 
-	void yearsToMonths(Object years) {
+	int yearsToMonths(int years) {
 		//	convert years to months using appropriate data types for the inputs and the outputs, 2 years => 24 months
+		int months = 12;
+		System.out.println(years + " years in number of months is " + years * months);
+		return (years * months);
 	}
 
-	void monthsToHours(Object months) {
+	int monthsToHours(int months) {
 		//	convert months to hours using appropriate data types for the inputs and the outputs, 8 months => 17520 hours
+		int days = 30; // Putting 30 as average amount of days in a month
+		int hours = 24;
+		System.out.println(months + " months in number of hours is " + (months * days * hours));
+		return (months * days * hours);
 	}
 
-	void daysToSeconds(Object days) {
+	int daysToSeconds(int days) {
 		//	convert days to seconds using appropriate data types for the inputs and the outputs, 2 years => 17520 hours
+		int hours = 24;
+		int minutes = 60;
+		int seconds = 60;
+		System.out.println(days + " days in number of seconds is " + (days * hours * minutes * seconds));
+		return (days * hours * minutes * seconds);
 	}
 
-	void centuriesToSeconds(Object centuries) {
+	long centuriesToSeconds(int centuries) {
 		//	convert centuries to seconds using appropriate data types for the inputs and the outputs, 1 century => 3.1556952 x 10^9 Seconds
+		int years = 100;
+		int days = 365;
+		int hours = 24;
+		int minutes = 60;
+		int seconds = 60;
+		long centuriesToSecs = centuries * years * days * hours * minutes;
+		// I am not multiplying all in one line since including seconds above would make value negative/overflow
+		centuriesToSecs = centuriesToSecs * seconds;
+		System.out.println(centuries + " centuries in number of seconds is " + centuriesToSecs);
+		return centuriesToSecs;
 	}
 
-	void dollarsToBitcoin(Object dollars) {
+	float dollarsToBitcoin(double dollars) {
 		//	convert (usd) dollars $ to bitcoin using appropriate data types for the inputs and the outputs, $35,000 dollars  3.1556952 x 10^9 Seconds
+		// Going to be using 1 bitcoin = $35,000 dollars since bitcoin is very volatile
+
+		return 0.0f;
 	}
 
 	void canDrive(Object age) {

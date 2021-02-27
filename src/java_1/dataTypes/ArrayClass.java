@@ -1,15 +1,10 @@
 package java_1.dataTypes;
 
-class Arrays {
+class ArrayClass {
     int[] nums = new int[]{10,23,3,4,5,2,1};
     String[] greetings = new String[]{"Hello","Howdy","Hallo","Hola","Bonjour","Ciao","أهلا و سهلا"};
     int[] bits = new int[]{0,1,1,1,0,0,0,1,1,1,1,1,0,1,0,0,1,0};
     String[] colors = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
-
-    public static void main(String[] args)
-    {
-        
-    }
 
     void printNums() {
 //        Programmatically print the nums array to the console.  Print each number on a new line.  The nums array is defined on this class.
