@@ -1,5 +1,7 @@
 package java_1.dataTypes;
 
+import java.util.Arrays;
+
 class DataTypes {
 
 		int number = 2021;
@@ -35,6 +37,10 @@ class DataTypes {
 		System.out.println(data.monthsToHours(3));
 		System.out.println(data.daysToSeconds(5));
 		System.out.println(data.centuriesToSeconds(1));
+		System.out.println(data.dollarsToBitcoin(10000));
+		System.out.println(data.canDrive(10));
+		// Using Arrays library for the toString method. Imported the library above
+		System.out.println(Arrays.toString(data.getDataTypes(15, false, 1000000001)));
 	}
 
 	int yearsToMonths(int years) {
@@ -78,17 +84,33 @@ class DataTypes {
 	float dollarsToBitcoin(double dollars) {
 		//	convert (usd) dollars $ to bitcoin using appropriate data types for the inputs and the outputs, $35,000 dollars  3.1556952 x 10^9 Seconds
 		// Going to be using 1 bitcoin = $35,000 dollars since bitcoin is very volatile
-
-		return 0.0f;
+		int bitcoin = 35000;
+		float dollarToBitcoin = (float) (dollars / bitcoin);
+		System.out.println(dollars + " dollars in bitcoin is " + dollarToBitcoin);
+		return dollarToBitcoin;
 	}
 
-	void canDrive(Object age) {
+	boolean canDrive(int age) {
 		//determine if the age passed in is ready to drive, return a value indicating whether or not the age passed in is ready to drive.
+		boolean oldEnough;
+		if (age >= 15)
+		{
+			System.out.println("Person aged " + age + " is ready to drive");
+			return true;
+		}
+		else
+		{
+			System.out.println("Person aged " + age + " is not ready to drive");
+			return false;
+		}
 	}
 
 	String[] getDataTypes(int num1, boolean bool1, long long1) {
 //		Use Java to get the data type of the three input variables; and return a string representation of the data types of the three variables as an array.  Do NOT hard code the answers here.  Make sure to use Java to programmatically get the data types.
-		return new String[]{null,null,null};
+		String num = Integer.toString(num1);
+		String bool = Boolean.toString(bool1);
+		String longString = Long.toString(long1);
+		return new String[]{num, bool, longString};
 	}
 
 }
