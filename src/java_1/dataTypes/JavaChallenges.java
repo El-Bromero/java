@@ -1,5 +1,10 @@
 package java_1.dataTypes;
 
+// Importing these libraries for the randomized message exercise
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class JavaChallenges {
 
 	public static void main(String[] args) {
@@ -7,20 +12,31 @@ public class JavaChallenges {
 
 		printMsg("Hello World!", 5);
 
-		System.out.println(nthFibonacci(10));
+		System.out.println("Fibonacci: " + nthFibonacci(10));
 
 		// Doing printf since it formats decimals to 2 places. Added empty println since printf prints on 1 line and doesn't add a new line at the end
 		System.out.printf("calcPay: %.2f", calcPay(12,50, 4));
 		System.out.println();
 
-		System.out.println(countQuarters(10.75));
+		System.out.println("Quadratic equation: " + solveQuadratic(5, 3, 10));
+
+		System.out.println("Count quarters: " + countQuarters(10.75));
 
 		System.out.println(reverseString("Hello World"));
+
+		String[] msg = {"hi", "dear", "friend", "how", "are", "you"};
+		System.out.println(shuffleMessage(msg));
+
+		int[] grades = {60, 20, 100, 95, 92, 87, 60, 77};
+		System.out.println("GPA is: " + calcGPA(grades));
 
 		printEgg();
 
 		Item item1 = new Item("stuff", 1000);
-		System.out.println(item1.toString());
+		Item item2 = new Item("things", 200);
+		Item item3 = new Item("Loch Ness Monster", 20.50);
+		Item[] items = {item1, item2, item3};
+		System.out.println("Total receipt of all items is: " + totaledReceipt(items));
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -56,13 +72,14 @@ public class JavaChallenges {
 		1 hr / period, $250.00 / hr, 2 periods => calcPay(1,250.00,2) => 500.00
  */
 		return (hrsPerPeriod * hourlyRate * payPeriods);
-
-		//return 0.0d;
 	}
 
 	static long solveQuadratic(int x, int y, int z) {
 		/* compute a quadratic equation using the input parameters.  Recall that a quadratic equation has the format :  x^2 + y + z */
-		return x;
+		// There is a quadratic formula but it doesn't help here. Seeing how we are getting the 3 values I will just add them and return that
+		// This solveQuadratic exercise confused me
+		System.out.println("x = " + x + " | y = " + y + " | z = " + z);
+		return x * x + y + z;
 	}
 
 	static int countQuarters(double amount) {
@@ -70,6 +87,7 @@ public class JavaChallenges {
 //		$10.50 => countQuarters(10.50) => 42
 		double convertAmount = amount / 0.25;
 		int numQuarter = (int) convertAmount;
+		System.out.println(amount + " being converted to quarters");
 		return numQuarter;
 	}
 
@@ -85,7 +103,6 @@ public class JavaChallenges {
 			j++;
 		}
 		return String.valueOf(reverseStr);
-		//return str;
 	}
 
 	static String shuffleMessage(String[] messages) {
@@ -94,7 +111,18 @@ public class JavaChallenges {
 		["hi", "dear", "friend"] => shuffleMessage() => "dear hi friend";
 		["hi", "dear", "friend"] => shuffleMessage() => "friend dear hi";
 */
-		return null;
+		// This converts string array messages to List and uses Collections.shuffle to randomize the data in messages. Convert back to array
+		List<String> stringList = Arrays.asList(messages);
+		Collections.shuffle(stringList);
+		stringList.toArray(messages);
+
+		String shuffledMsg = "";
+		for (String i : messages)
+		{
+			shuffledMsg += i + " ";
+		}
+
+		return shuffledMsg;
 	}
 
 	static double calcGPA(int[] scores) {
@@ -107,7 +135,40 @@ public class JavaChallenges {
 			80 - 89 - 3.0
 			90 - 100 - 4.0
 		 */
-		return 4.0;
+		double[] gpa = new double[scores.length];
+
+		int index = 0;
+		for (int i : scores)
+		{
+			if (i >= 0 && i <= 59)
+			{
+				gpa[index] = 0.0;
+			}
+			else if (i >= 60 && i <= 69)
+			{
+				gpa[index] = 1.0;
+			}
+			else if (i >= 70 && i <= 79)
+			{
+				gpa[index] = 2.0;
+			}
+			else if (i >= 80 && i <= 89)
+			{
+				gpa[index] = 3.0;
+			}
+			else if (i >= 90 && i <= 100)
+			{
+				gpa[index] = 4.0;
+			}
+			index++;
+		}
+		double avgGPA = 0.0;
+		for (double i : gpa)
+		{
+			avgGPA += i;
+		}
+		avgGPA = avgGPA / gpa.length;
+		return avgGPA;
 	}
 
 	static void printEgg() {
@@ -120,7 +181,7 @@ public class JavaChallenges {
 			 \_______/
 
 		*/
-		// Adding "\" to \s and "
+		// Adding "\" to \ and "
 		System.out.println("  _______  ");
 		System.out.println(" /       \\ ");
 		System.out.println("/         \\");
@@ -151,7 +212,12 @@ public class JavaChallenges {
 
 		//		Calculate the total amount of all items in the transactions array.  Note that each element of the transactions array is of type Item.
 		//		[Item{ item : "pants" , cost : 20.00} , Item{ item : "iPhone", cost : 1100.00} ] => totaledReceipt() => 1120.00
-		return 0.0;
+		double total = 0.0;
+		for(Item i : transactions)
+		{
+			total += i.cost;
+		}
+		return total;
 
 	}
 }
