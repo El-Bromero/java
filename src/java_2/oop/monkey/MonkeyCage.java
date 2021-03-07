@@ -21,8 +21,8 @@ class MonkeyCage {
                 smileCount++;
             }
         }
-        // If at least half the length on monkeys array are smiling then return true
-        if (smileCount >= (monkeys.length / 2))
+        // If amount of monkeys that are not smiling (monkeys.length-smileCount) is not at least smiling then return true
+        if (smileCount >= (monkeys.length - smileCount))
         {
             return true;
         }
