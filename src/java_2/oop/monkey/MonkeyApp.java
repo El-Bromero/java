@@ -13,5 +13,17 @@ public class MonkeyApp {
         You are NOT allowed to move the Monkey class outside of the MonkeyCage class.  Keep it exactly where it is.
         */
 
+		MonkeyCage cage = new MonkeyCage();
+
+		MonkeyCage.Monkey rafiqi = cage.new Monkey("Rafiki", true);
+		MonkeyCage.Monkey george = cage.new Monkey("Curious George", true);
+		MonkeyCage.Monkey kingKong = cage.new Monkey("King Kong", false);
+
+		cage.addMonkey(rafiqi);
+		cage.addMonkey(george);
+		cage.addMonkey(kingKong);
+
+		System.out.println(cage.areMonkeysSmiling(new MonkeyCage.Monkey[]{rafiqi, george, kingKong}));
+
 	}
 }
