@@ -18,40 +18,40 @@ public class RainforestApp {
 
 */
 		/* Creatures: River Dolphin, Poison Dart Frogs, Green Anaconda, Hyacinth Macaw, Squirrel Monkey, Giant Armadillo */
-		RiverDolphin riverDolphin = new RiverDolphin("9.2 ft", "River Dolphin", "pink");
+		RainforestCreature riverDolphin = new RiverDolphin("9.2 ft", "River Dolphin", "pink");
 		System.out.println(riverDolphin);
 		riverDolphin.eat();
-		riverDolphin.swim();
+		((RiverDolphin) riverDolphin).swim();
 		System.out.println();
 
-		PoisonDartFrog poisonDartFrog = new PoisonDartFrog("2 in", "Poison Dart Frog", true);
+		RainforestCreature poisonDartFrog = new PoisonDartFrog("2 in", "Poison Dart Frog", true);
 		System.out.println(poisonDartFrog);
 		poisonDartFrog.eat();
-		poisonDartFrog.secretePoison();
+		((PoisonDartFrog) poisonDartFrog).secretePoison();
 		System.out.println();
 
-		GreenAnaconda greenAnaconda = new GreenAnaconda("16 ft", "Green Anaconda", "slither");
+		RainforestCreature greenAnaconda = new GreenAnaconda("16 ft", "Green Anaconda", "slither");
 		System.out.println(greenAnaconda);
 		greenAnaconda.eat();
-		greenAnaconda.suffocate();
+		((GreenAnaconda) greenAnaconda).suffocate();
 		System.out.println();
 
-		HyacinthMacaw hyacinthMacaw = new HyacinthMacaw("3.3 ft", "Hyacinth Macaw", "hooked beak");
+		RainforestCreature hyacinthMacaw = new HyacinthMacaw("3.3 ft", "Hyacinth Macaw", "hooked beak");
 		System.out.println(hyacinthMacaw);
 		hyacinthMacaw.eat();
-		hyacinthMacaw.fly();
+		((HyacinthMacaw) hyacinthMacaw).fly();
 		System.out.println();
 
-		SquirrelMonkey squirrelMonkey = new SquirrelMonkey("14 in", "Squirrel Monkey", "black and white");
+		RainforestCreature squirrelMonkey = new SquirrelMonkey("14 in", "Squirrel Monkey", "black and white");
 		System.out.println(squirrelMonkey);
 		squirrelMonkey.eat();
-		squirrelMonkey.climb();
+		((SquirrelMonkey) squirrelMonkey).climb();
 		System.out.println();
 
-		GiantArmadillo giantArmadillo = new GiantArmadillo("3.3 ft", "Giant Armadillo", "armor-plate");
+		RainforestCreature giantArmadillo = new GiantArmadillo("3.3 ft", "Giant Armadillo", "armor-plate");
 		System.out.println(giantArmadillo);
 		giantArmadillo.eat();
-		giantArmadillo.dig();
+		((GiantArmadillo) giantArmadillo).dig();
 
 	}
 
