@@ -9,6 +9,10 @@ public abstract class Machine {
 		this.type = type;
 	}
 
+	protected String getType() {
+		return type;
+	}
+
 	public abstract void powerOn();
 	public abstract void powerOff();
 }
