@@ -8,30 +8,30 @@ public class LambdaMain {
 		//complete the static methods on the Animals class
 		//use streams wherever possible in your method implementations.
 
-//		System.out.println(Animals.capsFirst(true));
-//		System.out.println(Animals.capsFirst(false));
-//		System.out.println(Animals.getAnimals());
-//		System.out.println();
-//
-//		System.out.println("Adding " + Animals.addAnimal("Chicken"));
-//		System.out.println("Adding " + Animals.addAnimal("Dog"));
-//		System.out.println("Adding " + Animals.addAnimal("Cat"));
-//		System.out.println();
-//
-//		System.out.println(Animals.lowerFirst(true));
-//		System.out.println(Animals.lowerFirst(false));
-//		System.out.println(Animals.getAnimals());
-//		System.out.println();
-//
-//		System.out.println(Animals.flipAnimals(true));
-//		System.out.println(Animals.flipAnimals(false));
-//		System.out.println(Animals.getAnimals());
-//		System.out.println();
-//
-//		System.out.println(Animals.sortAnimals(true));
-//		System.out.println(Animals.sortAnimals(false));
-//		System.out.println(Animals.getAnimals());
-//		System.out.println();
+		System.out.println(Animals.capsFirst(true));
+		System.out.println(Animals.capsFirst(false));
+		System.out.println(Animals.getAnimals());
+		System.out.println();
+
+		System.out.println("Adding " + Animals.addAnimal("Chicken"));
+		System.out.println("Adding " + Animals.addAnimal("Dog"));
+		System.out.println("Adding " + Animals.addAnimal("Cat"));
+		System.out.println();
+
+		System.out.println(Animals.lowerFirst(true));
+		System.out.println(Animals.lowerFirst(false));
+		System.out.println(Animals.getAnimals());
+		System.out.println();
+
+		System.out.println(Animals.flipAnimals(true));
+		System.out.println(Animals.flipAnimals(false));
+		System.out.println(Animals.getAnimals());
+		System.out.println();
+
+		System.out.println(Animals.sortAnimals(true));
+		System.out.println(Animals.sortAnimals(false));
+		System.out.println(Animals.getAnimals());
+		System.out.println();
 
 		//Numbers********************
 		//1. complete the static methods in the Numbers class.
