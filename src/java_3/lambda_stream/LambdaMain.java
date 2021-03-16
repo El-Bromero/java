@@ -1,5 +1,7 @@
 package java_3.lambda_stream;
 
+import java_3.concurrency.Team;
+
 public class LambdaMain {
 
 	public static void main(String[] args) {
@@ -180,7 +182,12 @@ public class LambdaMain {
 		});
 		System.out.println(lambdaAppend.lambdaCompute(5000));
 		System.out.println(Numbers.getNums());
+		System.out.println();
 
+		// Thread Team from concurrency
+		Team returnSleep = new Team("ReturnSleep");
+		Thread returnSleepThread = new Thread(returnSleep);
+		returnSleepThread.start();
 	}
 
 }

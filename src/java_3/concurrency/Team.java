@@ -3,7 +3,7 @@ package java_3.concurrency;
 import java.util.ArrayList;
 import java.util.List;
 
-class Team {
+public class Team implements Runnable {
 
     private String teamName;
     private List<String> team = new ArrayList<>();
@@ -18,6 +18,24 @@ class Team {
         Set the name of the thead to be your agile team name.
      */
 
+    public Team(String teamName) {
+        this.teamName = teamName;
+    }
 
+    @Override
+    public void run() {
+        String[] mates = {"Anna", "Brandon", "Jude", "Rabi", "Rinn"};
+        for(String teammates : mates)
+        {
+            team.add(teammates);
+            System.out.println("{" + teammates + "} was added to the team.");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(team);
+    }
 
 }
