@@ -27,4 +27,18 @@ public class SalesCustomer {
                 ", cart=" + cart +
                 '}';
     }
+
+    public Product addProductToCart(Product product) {
+        if(cart.add(product)) {
+            return product;
+        }
+        else {
+            return null;
+        }
+    }
+
+    public Boolean clearCart() {
+        cart.clear();
+        return cart.isEmpty();
+    }
 }
