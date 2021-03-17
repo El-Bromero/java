@@ -1,4 +1,4 @@
-package java_2.oop.podcast;
+package main.java.java_2.oop.podcast;
 
 import java.util.ArrayList;
 import java.util.List;

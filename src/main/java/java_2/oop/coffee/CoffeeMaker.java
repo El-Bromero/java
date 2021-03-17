@@ -1,4 +1,4 @@
-package java_2.oop.coffee;
+package main.java.java_2.oop.coffee;
 
 class CoffeeMaker extends Machine {
 //	In addition to the functions of any Machine, the CoffeeMachine also has an ability to brew coffee.

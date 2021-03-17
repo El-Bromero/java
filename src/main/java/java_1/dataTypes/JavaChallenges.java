@@ -1,4 +1,4 @@
-package java_1.dataTypes;
+package main.java.java_1.dataTypes;
 
 // Importing these libraries for the randomized message exercise
 import java.util.Arrays;

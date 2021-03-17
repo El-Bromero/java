@@ -1,4 +1,4 @@
-package java_2.oop.rainforest;
+package main.java.java_2.oop.rainforest;
 
 public class GiantArmadillo extends RainforestCreature {
 

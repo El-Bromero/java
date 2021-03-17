@@ -1,4 +1,4 @@
-package java_2.oop.coffee;
+package main.java.java_2.oop.coffee;
 
 public abstract class Machine {
 	private final String type;

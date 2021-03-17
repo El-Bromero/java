@@ -1,4 +1,4 @@
-package java_3.serial;
+package main.java.java_3.serial;
 
 
 import java.io.Serializable;

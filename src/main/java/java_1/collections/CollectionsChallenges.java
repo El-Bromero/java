@@ -1,4 +1,4 @@
-package java_1.collections;
+package main.java.java_1.collections;
 
 import java.util.*;
 

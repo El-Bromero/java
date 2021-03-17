@@ -1,4 +1,4 @@
-package java_4.testing;
+package main.java.java_4.testing;
 
 public class Product {
 }

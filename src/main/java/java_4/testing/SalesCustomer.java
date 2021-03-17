@@ -11,4 +11,20 @@ public class SalesCustomer {
         this.name = name;
         cart = new ArrayList();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Product> getCart() {
+        return cart;
+    }
+
+    @Override
+    public String toString() {
+        return "SalesCustomer{" +
+                "name='" + name + '\'' +
+                ", cart=" + cart +
+                '}';
+    }
 }

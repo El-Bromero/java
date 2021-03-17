@@ -1,4 +1,4 @@
-package java_3.concurrency;
+package main.java.java_3.concurrency;
 
 class Reasoning extends Thread {
     //set up this class so it can become a valid thread. Reasoning should be created by inheriting from the Thread class.

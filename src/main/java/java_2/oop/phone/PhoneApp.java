@@ -1,4 +1,4 @@
-package java_2.oop.phone;
+package main.java.java_2.oop.phone;
 
 public class PhoneApp {
 

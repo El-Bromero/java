@@ -1,4 +1,4 @@
-package java_2.oop.bank;
+package main.java.java_2.oop.bank;
 
 public class BankingApp {
 

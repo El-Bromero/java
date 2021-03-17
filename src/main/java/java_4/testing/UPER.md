@@ -31,7 +31,7 @@
 *Check if good is imported to it applies 5%
 *Have a Customer class that holds customer info and methods
 *Have a Product class that holds product info and methods
-*Have a cart/register class that will take the customer's products and log receipt
+*Have a receipt class that will take the customer's products and log receipt
 *Have a Main class that instantiate objects of classes mentioned above
 *
 <h2>
