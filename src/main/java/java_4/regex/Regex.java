@@ -1,8 +1,10 @@
-package java_4.regex;
+package main.java.java_4.regex;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class Regex {
 
@@ -13,7 +15,8 @@ class Regex {
 
     static void explainPattern() {
         // What does the following pattern match? (\d){36} explain in a println() statement.
-        System.out.println("The following pattern ('\\d'){35} matches : ...");
+        System.out.println("The following pattern (\\d){36} matches : \\d is any digit 0-9 and {36} matches the previous token 36 times");
+        System.out.println("The following pattern ('\\d'){35} matches : first ' is literal ' then \\d is any digit 0-9. Second ' is another literal '. {35} matches the previous token 35 times");
     }
 
     static int countWords(String str) {
@@ -22,18 +25,42 @@ class Regex {
 			wordCount(" this     is my     spaced out       sentence ") => 6
 			wordCount(" ") =>  0.
 			*/
-        return 0;
+        Pattern p = Pattern.compile("[a-z|A-Z]+");
+        Matcher m = p.matcher(str);
+        int count = 0;
+        while (m.find())
+        {
+            count++;
+        }
+        return count;
     }
 
     static int countBooks() {
         // Find all the occurences of any form of 'book' in the bookText class variable. use java_4.regex to match the occurences and store the count of books to an int.
         int bookCount = 0;
+        Pattern p = Pattern.compile("(b|B)ook.");
+        Matcher m = p.matcher(bookText);
+        while (m.find())
+        {
+            bookCount++;
+        }
         return bookCount;
     }
 
     static String[] tmFirstNameBasis() {
         // Create a new array of the first names of the TEKmentors array defined as a class property.  Use Regex to only grab the first name of every TEKmentor in the TEKmentors set defined in this class.  Return an Array of first names.
-        String[] firstNamesTMs = {};
+        String[] firstNamesTMs = new String[TEKmentors.size()];
+        Pattern p = Pattern.compile("^\\S*");
+        int index = 0;
+        for (String firstName : TEKmentors)
+        {
+            Matcher m = p.matcher(firstName);
+            while (m.find())
+            {
+                firstNamesTMs[index] = m.group();
+            }
+            index++;
+        }
         return firstNamesTMs;
     }
 
@@ -46,25 +73,45 @@ class Regex {
          */
 
         String happy = sleepy;
+        Pattern p = Pattern.compile(".sleepy", Pattern.CASE_INSENSITIVE);
+        Matcher m = p.matcher(happy);
+        happy = m.replaceAll(" happy");
         return happy;
     }
 
     static int findPhoneNumbers(String str) {
     // determine if the input string is a valid phone number.  If not, return 0.
     //   examples : (123)-234-3456, 123456789, 123 342 2222, (123)345-3333
+        Pattern p = Pattern.compile("^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$");
+        Matcher m = p.matcher(str);
+        if (m.matches())
+        {
+            return 1;
+        }
         return 0;
     }
 
 
     static void printArrows() {
+        Pattern p = Pattern.compile("[\u2190-\u21FF]");
         for(String arr : arrows) {
-            System.out.println(arr);
+            Matcher m = p.matcher(arr);
+            if (m.find())
+            {
+                System.out.println(arr);
+            }
         }
-
+        
         //You are looking for unicode arrow symbols in a string.  https://jrgraphix.net/r/Unicode/2190-21FF is a selection of unicode arrow symbols Match all the codes that are arrows in the arrows class field defined above, and then print them out to the console.  They should be printing out as the arrow images.
     }
 
     public static void main(String[] args) {
+        explainPattern();
+        System.out.println("countWords: " + countWords(" this     is my     spaced out       sentence "));
+        System.out.println("countBooks: " + countBooks());
+        System.out.println(Arrays.toString(tmFirstNameBasis()));
+        System.out.println(beHappyNotSleepy());
+        System.out.println("findPhoneNumber: " + findPhoneNumbers("(123)-234-3456"));
         printArrows();
     }
 }
