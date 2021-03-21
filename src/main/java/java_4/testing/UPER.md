@@ -37,22 +37,19 @@
 <h2>
     3. Executing the Plan
 </h2>
-*
-*
-*
-*
-*
-*
-*
-*
+*Implementing by TTD for the most part
+*Testing methods before creating them and refactoring
+*Customer has correct data
+*Product has correct data
+*Receipt needs to manipulate Customer cart well
+*Manipulating cart correctly
+*Log4j2 is implemented
+*Log file being created with correct info
 <h2>
     4. Reflection / Refactor
 </h2>
-*
-*
-*
-*
-*
-*
-*
-*
+*TTD helped in testing some logic that would go into calculating sales tax of products
+*By testing methods then I was sure that those methods were working as intended
+*Logging was annoying to set up correctly
+*Could have checked if there were multiple of same product but as of now it will appear separate
+*Logging :/
