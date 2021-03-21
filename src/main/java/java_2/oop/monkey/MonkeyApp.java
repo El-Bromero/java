@@ -1,4 +1,4 @@
-package main.java.java_2.oop.monkey;
+package java_2.oop.monkey;
 
 public class MonkeyApp {
 

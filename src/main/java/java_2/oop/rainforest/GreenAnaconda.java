@@ -1,4 +1,4 @@
-package main.java.java_2.oop.rainforest;
+package java_2.oop.rainforest;
 
 public class GreenAnaconda extends RainforestCreature {
 

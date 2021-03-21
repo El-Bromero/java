@@ -1,4 +1,4 @@
-package main.java.java_2.oop.phone;
+package java_2.oop.phone;
 
 class Contact {
 /*

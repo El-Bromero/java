@@ -1,4 +1,4 @@
-package main.java.java_2.oop.podcast;
+package java_2.oop.podcast;
 
 public class Main {
 

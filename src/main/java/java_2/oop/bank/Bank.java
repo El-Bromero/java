@@ -1,4 +1,4 @@
-package main.java.java_2.oop.bank;
+package java_2.oop.bank;
 
 import java.util.ArrayList;
 import java.util.List;

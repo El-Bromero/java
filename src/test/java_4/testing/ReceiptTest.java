@@ -7,11 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ReceiptTest {
 
     @Test
-    void receiptTest() {
-
-    }
-
-    @Test
     void isExemptItemTest() {
         SalesCustomer customer = new SalesCustomer("Bob");
         Product product = new Product("Book", 12.49, "book", false);
@@ -52,11 +47,4 @@ public class ReceiptTest {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    void nearestDecimalTest() {
-//        Receipt receipt = new Receipt(null);
-//        double expected = 0.9;
-//        double actual = receipt.nearestDecimal(0.875);
-//        assertEquals(expected, actual);
-//    }
 }

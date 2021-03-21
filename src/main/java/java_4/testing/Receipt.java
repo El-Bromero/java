@@ -40,13 +40,10 @@ public class Receipt {
                 }
             }
             DecimalFormat f = new DecimalFormat("#0.00");
-            System.out.println("1 " + taxedCart.get(index).getName() + ": " + f.format(taxedCart.get(index).getPrice()));
             logger.info("1 " + taxedCart.get(index).getName() + ": " + f.format(taxedCart.get(index).getPrice()));
             index++;
         }
-        System.out.println("Sales Taxes: " + getTotalTax());
         logger.info("Sales Taxes: " + getTotalTax());
-        System.out.println("Total: " + getTotalCartAfterTax());
         logger.info("Total: " + getTotalCartAfterTax());
     }
 

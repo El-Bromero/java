@@ -1,4 +1,4 @@
-package main.java.java_2.oop.coffee;
+package java_2.oop.coffee;
 
 public class Cup {
 
