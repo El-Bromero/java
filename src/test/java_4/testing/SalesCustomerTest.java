@@ -1,7 +1,5 @@
 package java_4.testing;
 
-import main.java.java_4.testing.Product;
-import main.java.java_4.testing.SalesCustomer;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -34,7 +32,7 @@ public class SalesCustomerTest {
     @Test
     void addProductToSalesCustomerCart() {
         SalesCustomer customer = new SalesCustomer("Bob");
-        Product expected = new Product("Toothbrush", 4.99, "Self-care");
+        Product expected = new Product("Toothbrush", 4.99, "Self-care", true);
         Product actual = customer.addProductToCart(expected);
 
         assertEquals(expected, actual);
@@ -43,7 +41,7 @@ public class SalesCustomerTest {
     @Test
     void clearSalesCustomerCart() {
         SalesCustomer customer = new SalesCustomer("Bob");
-        customer.addProductToCart(new Product("Toothbrush", 4.99, "Self-care"));
+        customer.addProductToCart(new Product("Toothbrush", 4.99, "Self-care", true));
         Boolean expected = true;
         Boolean actual = customer.clearCart();
 

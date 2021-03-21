@@ -1,4 +1,4 @@
-package main.java.java_3.lambda_stream;
+package java_3.lambda_stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;

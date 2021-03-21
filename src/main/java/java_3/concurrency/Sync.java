@@ -1,4 +1,4 @@
-package main.java.java_3.concurrency;
+package java_3.concurrency;
 
 import java.util.List;
 import java.util.ArrayList;

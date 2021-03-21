@@ -1,4 +1,4 @@
-package main.java.java_4.regex;
+package java_4.regex;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -101,7 +101,7 @@ class Regex {
                 System.out.println(arr);
             }
         }
-        
+
         //You are looking for unicode arrow symbols in a string.  https://jrgraphix.net/r/Unicode/2190-21FF is a selection of unicode arrow symbols Match all the codes that are arrows in the arrows class field defined above, and then print them out to the console.  They should be printing out as the arrow images.
     }
 

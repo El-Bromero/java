@@ -1,6 +1,5 @@
-package main.java.java_3.concurrency;
+package java_3.concurrency;
 
-import java.util.concurrent.atomic.AtomicIntegerArray;
 
 public class Main {
 

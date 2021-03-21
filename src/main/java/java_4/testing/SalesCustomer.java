@@ -1,4 +1,4 @@
-package main.java.java_4.testing;
+package java_4.testing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +20,6 @@ public class SalesCustomer {
         return cart;
     }
 
-    @Override
-    public String toString() {
-        return "SalesCustomer{" +
-                "name='" + name + '\'' +
-                ", cart=" + cart +
-                '}';
-    }
-
     public Product addProductToCart(Product product) {
         if(cart.add(product)) {
             return product;
@@ -41,4 +33,5 @@ public class SalesCustomer {
         cart.clear();
         return cart.isEmpty();
     }
+
 }

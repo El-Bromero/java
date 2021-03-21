@@ -1,6 +1,6 @@
-package main.java.java_3.lambda_stream;
+package java_3.lambda_stream;
 
-import main.java.java_3.concurrency.Team;
+import java_3.concurrency.Team;
 
 public class LambdaMain {
 
