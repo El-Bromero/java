@@ -3,9 +3,9 @@ package java_4.testing;
 public class SalesTaxApp {
     public static void main(String[] args) {
         SalesCustomer customer1 = new SalesCustomer("Bob");
-        Product book = new Product("Book", 12.49, "book", false);
+        Product book = new Product("book", 12.49, "book", false);
         Product cd = new Product("CD", 14.99, "music", false);
-        Product chocolateBar = new Product("Chocolate Bar", 0.85, "food", false);
+        Product chocolateBar = new Product("chocolate bar", 0.85, "food", false);
         customer1.addProductToCart(book);
         customer1.addProductToCart(cd);
         customer1.addProductToCart(chocolateBar);

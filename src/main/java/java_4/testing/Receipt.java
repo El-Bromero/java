@@ -4,10 +4,15 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Receipt {
     private SalesCustomer customer;
     private List<Product> taxedCart;
     private double totalTax;
+
+    static Logger logger = LoggerFactory.getLogger(Receipt.class);
 
     public Receipt(SalesCustomer customer) {
         this.customer = customer;
@@ -36,10 +41,13 @@ public class Receipt {
             }
             DecimalFormat f = new DecimalFormat("#0.00");
             System.out.println("1 " + taxedCart.get(index).getName() + ": " + f.format(taxedCart.get(index).getPrice()));
+            logger.info("1 " + taxedCart.get(index).getName() + ": " + f.format(taxedCart.get(index).getPrice()));
             index++;
         }
         System.out.println("Sales Taxes: " + getTotalTax());
+        logger.info("Sales Taxes: " + getTotalTax());
         System.out.println("Total: " + getTotalCartAfterTax());
+        logger.info("Total: " + getTotalCartAfterTax());
     }
 
     public Boolean isExemptItem(Product product) {
