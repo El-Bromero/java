@@ -47,4 +47,34 @@ public class ReceiptTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void getTotalTax() {
+        SalesCustomer customer = new SalesCustomer("Bob");
+        Product product = new Product("imported box of chocolates", 11.25, "food", true);
+        Product product2 = new Product("CD", 14.99, "music", false);
+        customer.addProductToCart(product);
+        customer.addProductToCart(product2);
+
+        Receipt receipt = new Receipt(customer);
+
+        double expected = 0.0;
+        double actual = Double.parseDouble(receipt.getTotalTax());
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void getTotalCartAfterTaxTest() {
+        SalesCustomer customer = new SalesCustomer("Bob");
+        Product product = new Product("imported box of chocolates", 11.25, "food", true);
+        Product product2 = new Product("CD", 14.99, "music", false);
+        customer.addProductToCart(product);
+        customer.addProductToCart(product2);
+
+        Receipt receipt = new Receipt(customer);
+
+        double expected = 0.0;
+        double actual = receipt.getTotalCartAfterTax();
+        assertEquals(expected, actual);
+    }
 }
