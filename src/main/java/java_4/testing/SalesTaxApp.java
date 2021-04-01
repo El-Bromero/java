@@ -11,7 +11,6 @@ public class SalesTaxApp {
         customer1.addProductToCart(chocolateBar);
         Receipt receipt1 = new Receipt(customer1);
         receipt1.printReceipt();
-        System.out.println();
 
         SalesCustomer customer2 = new SalesCustomer("Rob");
         Product importedChocolates = new Product("imported box of chocolates", 10.00, "food", true);
@@ -21,7 +20,6 @@ public class SalesTaxApp {
         customer2.addProductToCart(importedPerfume);
         Receipt receipt2 = new Receipt(customer2);
         receipt2.printReceipt();
-        System.out.println();
 
         SalesCustomer customer3 = new SalesCustomer("Ron");
         Product importedPerfume2 = new Product("imported bottle of perfume", 27.99, "fragrance", true);
